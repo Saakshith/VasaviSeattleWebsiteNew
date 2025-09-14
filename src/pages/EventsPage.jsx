@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/EventsPage.css';
@@ -41,7 +41,7 @@ const EventsPage = () => {
   const actualFolderId = extractFolderId(driveFolderId);
 
   // Sample past events for testing (fallback when API fails)
-  const samplePastEvents = [
+  const samplePastEvents = React.useMemo(() => [
     {
       id: 'sample-1',
       name: 'Navaratri-10-14-2024',
@@ -60,7 +60,7 @@ const EventsPage = () => {
       imageId: null,
       imageName: null
     }
-  ];
+  ], []);
 
   // Fetch past events from Google Drive
   useEffect(() => {
@@ -141,7 +141,7 @@ const EventsPage = () => {
     }
 
     fetchPastEvents();
-  }, [actualFolderId]);
+  }, [actualFolderId, samplePastEvents]);
 
   // Parse folder name to extract event name and date (format: "Name of event-xx/xx/xx")
   const parseFolderName = (folderName) => {

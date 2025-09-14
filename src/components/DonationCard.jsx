@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faExclamationTriangle, faPaypal, faCreditCard, faUniversity, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCreditCard, faUniversity, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faPaypal as faPaypalBrand, faApplePay } from '@fortawesome/free-brands-svg-icons';
 import "../styles/DonationCard.css";
 
@@ -15,8 +15,7 @@ const DonationForm = () => {
     message: ''
   });
   const [paymentMethod, setPaymentMethod] = useState('');
-  const [donationStatus, setDonationStatus] = useState(null);
-  const [showBankDetails, setShowBankDetails] = useState(false);
+  const [, setDonationStatus] = useState(null);
 
   const presetAmounts = [50, 100, 150, 200];
   const totalSteps = 3;
@@ -59,12 +58,6 @@ const DonationForm = () => {
   const handlePaymentMethodSelect = (method) => {
     console.log('Payment method selected:', method);
     setPaymentMethod(method);
-    if (method === 'bank') {
-      setShowBankDetails(true);
-      console.log('Bank details should be visible now');
-    } else {
-      setShowBankDetails(false);
-    }
   };
 
   // PayPal Integration
@@ -120,7 +113,7 @@ const DonationForm = () => {
       };
       document.body.appendChild(script);
     }
-  }, [paymentMethod, currentStep, amount, donorInfo]);
+  }, [paymentMethod, currentStep, amount, donorInfo, donationType]);
 
   const handleVenmoPayment = () => {
     const venmoUsername = process.env.REACT_APP_VENMO_USERNAME;

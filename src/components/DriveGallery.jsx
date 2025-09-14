@@ -124,7 +124,7 @@ export default function DriveGallery({ folderUrlOrId, maxImages = 200 }) {
           throw new Error(`API test failed (${testResponse.status}): ${testText}`);
         }
 
-        const testData = await testResponse.json();
+        await testResponse.json();
 
         // If test passes, proceed with full image query
         do {
