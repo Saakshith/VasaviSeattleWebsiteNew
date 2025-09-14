@@ -1,0 +1,157 @@
+/* Contact Page Styles */
+.contact-page {
+  min-height: 100vh;
+  background-color: var(--white-color);
+}
+
+/* Header/Banner Section */
+.contact-banner {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-banner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: white;
+}
+
+.contact-banner p {
+  font-size: 1.25rem;
+  margin: 0;
+  color: white;
+  opacity: 0.95;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--black-color);
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #c82333;
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.submit-btn svg {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-banner {
+    padding: 3rem 1.5rem;
+  }
+  
+  .contact-banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-banner p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-form-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .submit-btn {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-banner {
+    padding: 2.5rem 1rem;
+  }
+  
+  .contact-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-banner p {
+    font-size: 1rem;
+  }
+  
+  .contact-form-section {
+    padding: 2.5rem 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.625rem;
+  }
+}

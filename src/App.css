@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --accent-color: #E31E24;
+  --accent-color-hover: #b91c1c;
+  --primary-color: #0C2E5B;
+
+  --primary-font: 'Open Sans', sans-serif;
+  --accent-font: 'Merriweather', serif;
+
+  --default-spacing: clamp(20px, 5.2vw, 200px);
+}
+
+body{
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.section-header{
+  color: var(--black-color);
+  font-family: var(--accent-font);
+}
+
+.subsection-header{
+  color: var(--primary-color);
+  font-family: var(--accent-font);
+  font-size: 18px;
+  margin: 2rem 0 0.5rem 0;
+}
+
+button{
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1rem;
+}
+
+button:hover{
+  background-color: var(--accent-color-hover);
+}
