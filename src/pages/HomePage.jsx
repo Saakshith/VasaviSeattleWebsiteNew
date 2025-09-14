@@ -124,8 +124,7 @@ const HomePage = () => {
         </section>
         <section className="financials-section">
             <h2 className="section-header">Vasavi Seattle takes great pride in our financial efficiency and accountability. We work to maximize the value of every dollar we receive.</h2>
-            <p>More than 90 percent of our expended resources – among the highest of all philanthropic organizations – support our poverty-fighting projects around the world. Less than 10 percent of expended resources go toward administrative and fundraising costs.
-            We encourage you to investigate before you donate. Click on the links below for independently verified information about Vasavi Seattle's finances.</p>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
             <div className="financials-preview-content">
                 <Financial folderUrlOrId={process.env.REACT_APP_FINANCIALS_FOLDER_URL} maxFiles={3} />
             </div>
